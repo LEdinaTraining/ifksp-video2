@@ -66,3 +66,11 @@ orderForm.addEventListener("submit", function(ev) {
         console.log(this);
     });
     
+    //Parent element kezlése
+    let alertCloseButtons = document.querySelectorAll(".close[data-dismiss='alert']")
+    let alertCloseEventHandlerFunction = function(ev) {
+        this.parentElement.style.display = "none";
+    };
+    for (let i = 0; i < alertCloseButtons.length; i++) {
+        alertCloseButtons[i].addEventListener("click", alertCloseEventHandlerFunction);
+    }
