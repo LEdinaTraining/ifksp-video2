@@ -29,10 +29,17 @@ let users = [
 ];
 
 let tableBody = document.querySelector("#userTable tbody");
+let createTD = (html, parent) => {
+    let td = document.createElement("td");
+    td.innerHTML = html;
+    parent.appendChild(td);
+};
+
 for (let k in users) {
     let tr = document.createElement("tr");
-    let td = document.createElement("td");
-    td.innerHTML = parseInt(k)+1;
-    tr.appendChild(td);
+    createTD(parseInt(k)+1, tr);
+    for (let value of Object.values(users)) {
+        createTD(value, tr);
+    }
     tableBody.appendChild(tr);
 }
