@@ -42,7 +42,13 @@
             <div class="col-3"></div>
             <div class="col-6">
                 <h3>Hamburger rendelés</h3>
-                <form action="">
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <strong>Kedves vásárlónk!</strong> 
+                    A rendeléshez kérjük töltse ki az űrlapot!                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id=orderForm action="">
                     <div class="form-group">
                         <label for="">Feltét</label>
                         <input id="topInput" type="text" name="top-input" class="form-control">
@@ -61,17 +67,16 @@
                             ingyenes!
                         </small>
                     </div>
-                    <button onclick="calcAmount()" type="button" class="btn btn-primary">Megrendelés</button>
+                    <button type="submit" class="btn btn-primary">Megrendelés</button>
                 </form>
 
             </div>
             <div class="col-3"></div>
         </div>
     </div>
-    <script src="js/main2.js"></script>
+    <script src="js/main.js"></script>
     <!-- <script src="js/scope.js"></script> -->
     <script src="js/algo.js"></script>
 </body>
 
 </html>
-
